@@ -11,6 +11,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix omv: <http://omv.ontoware.org/2007/07/OWLChanges>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
 
 ##########################################################
 ### Part corresponding to the reused terms ###
@@ -485,13 +486,13 @@ och:AddDataProperty a owl:Class ;
     rdfs:label "Add Data Property" ;
     rdfs:comment "The change operation corresponding to the addition of a data property";
     rdfs:subClassOf och:DataPropertyChange, och:AddProperty;
-     owl:equivalentClass omv:AddDataProperty.
+     prov:wasDerivedFrom omv:AddDataProperty.
 
 och:AddObjectProperty a owl:Class ;
     rdfs:label "Add Object Property" ;
     rdfs:comment "The change operation corresponding to the addition of an object property";
     rdfs:subClassOf och:ObjectPropertyChange, och:AddProperty;
-    owl:equivalentClass omv:AddObjectProperty.
+    prov:wasDerivedFrom omv:AddObjectProperty.
 
 och:AddRangeDataProperty a owl:Class ;
     rdfs:label "Add Range Data Property" ;
@@ -518,14 +519,14 @@ och:RemoveDataProperty a owl:Class ;
     rdfs:comment "The change operation corresponding to the removal of a data property";
     rdfs:subClassOf och:RemoveProperty;
     rdfs:subClassOf och:DataPropertyChange;
-    owl:equivalentClass omv:RemoveDataProperty .
+    prov:wasDerivedFrom omv:RemoveDataProperty .
 
 och:RemoveObjectProperty a owl:Class ;
     rdfs:label "Remove Object Property" ;
     rdfs:comment "The change operation corresponding to the removal of an object property";
     rdfs:subClassOf och:RemoveProperty;
     rdfs:subClassOf och:ObjectPropertyChange;
-    owl:equivalentClass omv:RemoveObjectProperty .
+    prov:wasDerivedFrom omv:RemoveObjectProperty .
 
 och:RemoveRangeDataProperty a owl:Class ;
     rdfs:label "Remove Range Data Property" ;
@@ -556,13 +557,13 @@ och:AddDomain a owl:Class ;
     rdfs:label "Add Domain" ;
     rdfs:comment "The change operation corresponding to the addition of the domain to a given property";
     rdfs:subClassOf och:DomainChange;
-    owl:equivalentClass omv:AddDomain .
+    prov:wasDerivedFrom omv:AddDomain .
 
 och:AddEquivalentClass a owl:Class ;
     rdfs:label "Add Equivalent Class" ;
     rdfs:comment "The change operation corresponding to the addition of an equivalent class relation between two classes";
     rdfs:subClassOf och:EquivalentClassChange;
-    owl:equivalentClass omv:AddEquivalentClass.
+    prov:wasDerivedFrom omv:AddEquivalentClass.
 
 och:AddEquivalentProperty a owl:Class ;
     rdfs:label "Add Equivalent Property" ;
@@ -583,7 +584,7 @@ och:AddSubPropertyOf a owl:Class ;
     rdfs:label "Add Sub Property Of" ;
     rdfs:comment "The change operation corresponding to the addition of a subProperty relation between two properties";
     rdfs:subClassOf och:SubPropertyChange;
-    owl:equivalentClass omv:AddSubPropertyOf.
+    prov:wasDerivedFrom omv:AddSubPropertyOf.
 
 och:ClassRelationChange a owl:Class ;
     rdfs:label "Class Relation Change" ;
@@ -594,7 +595,7 @@ och:DataPropertyChange a owl:Class ;
     rdfs:label "Data Property Change" ;
     rdfs:comment "The change operation corresponding to the change of a data property";
     rdfs:subClassOf och:PropertyChange;
-    owl:equivalentClass omv:DataPropertyChange.
+    prov:wasDerivedFrom omv:DataPropertyChange.
 
 och:DisjointPropertyChange a owl:Class ;
     rdfs:label "Disjoint Property Change" ;
@@ -610,7 +611,7 @@ och:EquivalentClassChange a owl:Class ;
     rdfs:label "Equivalent Class Change" ;
     rdfs:comment "The change operation corresponding to the change of an equivalent class relation between two classes";
     rdfs:subClassOf och:ClassRelationChange;
-    owl:equivalentClass omv:EquivalentClassChange.
+    prov:wasDerivedFrom omv:EquivalentClassChange.
 
 och:EquivalentPropertyChange a owl:Class ;
     rdfs:label "Equivalent Property Change" ;
@@ -626,7 +627,7 @@ och:ObjectPropertyChange a owl:Class ;
     rdfs:label "Object Property Change" ;
     rdfs:comment "The change operation corresponding to the change of an object property";
     rdfs:subClassOf och:PropertyChange;
-    owl:equivalentClass omv:ObjectPropertyChange .
+    prov:wasDerivedFrom omv:ObjectPropertyChange .
 
 och:PropertyCharacteristicChange a owl:Class ;
     rdfs:label "Property Characteristic Change" ;
@@ -652,13 +653,13 @@ och:RemoveDomain a owl:Class ;
     rdfs:label "Remove Domain" ;
     rdfs:comment "The change operation corresponding to the removal of the domain of a given property";
     rdfs:subClassOf och:DomainChange;
-    owl:equivalentClass omv:RemoveDomain .
+    prov:wasDerivedFrom omv:RemoveDomain .
 
 och:RemoveEquivalentClass a owl:Class ;
     rdfs:label "Remove Equivalent Class" ;
     rdfs:comment "The change operation corresponding to the removal of the equivalent class relation between two classes";
     rdfs:subClassOf och:EquivalentClassChange;
-    owl:equivalentClass omv:RemoveEquivalentClass.
+    prov:wasDerivedFrom omv:RemoveEquivalentClass.
 
 och:RemoveEquivalentProperty a owl:Class ;
     rdfs:label "Remove Equivalent Property" ;
@@ -679,7 +680,7 @@ och:RemoveSubPropertyOf a owl:Class ;
     rdfs:label "Remove Sub Property Of" ;
     rdfs:comment "The change operation corresponding to the removal of the subProperty relation between two properties";
     rdfs:subClassOf och:SubPropertyChange;
-    owl:equivalentClass omv:RemoveSubPropertyOf .
+    prov:wasDerivedFrom omv:RemoveSubPropertyOf .
 
 och:RenameEntity a owl:Class ;
     rdfs:label "Rename Entity" ;
@@ -695,19 +696,19 @@ och:AddRange a owl:Class ;
     rdfs:label "Add Range" ;
     rdfs:comment "The change operation corresponding to the addition of the range to a given property";
     rdfs:subClassOf och:RangeChange;
-    owl:equivalentClass omv:AddRange .
+    prov:wasDerivedFrom omv:AddRange .
 
 och:ClassChange a owl:Class ;
     rdfs:label "Class Change" ;
     rdfs:comment "The change operation corresponding to the change of a given class within the ontology";
     rdfs:subClassOf och:EntityChange;
-    owl:equivalentClass omv:ClassChange.
+    prov:wasDerivedFrom omv:ClassChange.
 
 och:RemoveRange a owl:Class ;
     rdfs:label "Remove Range" ;
     rdfs:comment "The change operation corresponding to the removal of the range of a given property";
     rdfs:subClassOf och:RangeChange;
-    owl:equivalentClass omv:RemoveRange.
+    prov:wasDerivedFrom omv:RemoveRange.
 
 och:addedEntity a owl:ObjectProperty ;
     rdfs:label "added entity" ;
@@ -741,7 +742,7 @@ och:targetClass a owl:ObjectProperty ;
 och:OntologicalChange a owl:Class ;
     rdfs:label "Ontological Change";    
     rdfs:comment "The class that represents all changes within an ontology being term-level, structural level, or higher level";
-    owl:equivalentClass omv:OntologyChange.
+    prov:wasDerivedFrom omv:OntologyChange.
 
 och:PropertyChange a owl:Class ;
     rdfs:label "Property Change" ;
@@ -779,13 +780,13 @@ och:AddProperty a owl:Class;
     rdfs:label "Add Property";
     rdfs:comment "The class that represents the addition of a property to an ontology";
     rdfs:subClassOf och:PropertyChange;
-    owl:equivalentClass omv:AddProperty.
+    prov:wasDerivedFrom omv:AddProperty.
 
 och:RemoveProperty a owl:Class;
     rdfs:label "Remove Property";
     rdfs:comment "The class that represents the removal of a property to an ontology";
     rdfs:subClassOf och:PropertyChange;
-    owl:equivalentClass omv:RemoveProperty.
+    prov:wasDerivedFrom omv:RemoveProperty.
 
 och:addedProperty a owl:ObjectProperty;
     rdfs:label "added Property";

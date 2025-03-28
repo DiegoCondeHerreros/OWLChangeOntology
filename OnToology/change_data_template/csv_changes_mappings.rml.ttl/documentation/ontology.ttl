@@ -100,13 +100,13 @@ _:genid13 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rm
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDataProperty> .
 
-_:genid15 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
-                                                  ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
-
-_:genid17 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
+_:genid15 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
+
+_:genid17 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
 
 _:genid19 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
                                                   ] ;
@@ -127,25 +127,25 @@ _:genid21 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#AddDataPr
 _:genid22 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
            <http://semweb.mmlab.be/ns/rml#source> "AddDataProperty_template.csv" .
 
-_:genid23 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
+_:genid23 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
                                                   ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDomainToProperty> .
 
-_:genid25 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
+_:genid25 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Domain"
                                                   ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDomain> .
 
 _:genid27 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
 
-_:genid29 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
+_:genid29 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
                                                   ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDomainToProperty> .
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
 
-_:genid31 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Domain"
+_:genid31 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
                                                   ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDomain> .
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
 
 _:genid33 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#AddDomain> ;
            <http://www.w3.org/ns/r2rml#template> "http://example.com/changes/AddDomain/{Predicate}-{Domain}" .
@@ -162,25 +162,25 @@ _:genid33 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#AddDomain
 _:genid34 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
            <http://semweb.mmlab.be/ns/rml#source> "AddObjectProperty_template.csv" .
 
-_:genid35 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
-                                                  ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
-
-_:genid37 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
-                                                  ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDomainToProperty> .
-
-_:genid39 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Domain"
+_:genid35 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Domain"
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDomain> .
 
-_:genid41 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
+_:genid37 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
                                                   ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
 
-_:genid43 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
+_:genid39 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDomainToProperty> .
+
+_:genid41 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
+
+_:genid43 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
 
 _:genid45 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#AddDomain> ;
            <http://www.w3.org/ns/r2rml#template> "http://example.com/changes/AddDomain/{Predicate}-{Domain}" .
@@ -227,25 +227,25 @@ _:genid55 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#AddObject
 _:genid56 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
            <http://semweb.mmlab.be/ns/rml#source> "AddDataProperty_template.csv" .
 
-_:genid57 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
+_:genid57 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
                                                   ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedRangeToProperty> .
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
 
-_:genid59 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
-                                                  ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
-
-_:genid61 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Range"
-                                                  ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDataRange> .
-
-_:genid63 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
+_:genid59 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
 
-_:genid65 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
+_:genid61 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
                                                   ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
+
+_:genid63 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedRangeToProperty> .
+
+_:genid65 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Range"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedDataRange> .
 
 _:genid67 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#AddRangeDataProperty> ;
            <http://www.w3.org/ns/r2rml#template> "http://example.com/changes/AddRange/{Predicate}-{Range}" .
@@ -270,17 +270,17 @@ _:genid71 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rm
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
 
-_:genid73 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
+_:genid73 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Range"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedObjectRange> .
+
+_:genid75 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
 
-_:genid75 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
+_:genid77 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedRangeToProperty> .
-
-_:genid77 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Range"
-                                                  ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#addedObjectRange> .
 
 _:genid79 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#AddRangeObjectProperty> ;
            <http://www.w3.org/ns/r2rml#template> "http://example.com/changes/AddRange/{Predicate}-{Range}" .
@@ -297,9 +297,9 @@ _:genid79 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#AddRangeO
 _:genid80 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
            <http://semweb.mmlab.be/ns/rml#source> "AddSubClass_template.csv" .
 
-_:genid81 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Parent"
+_:genid81 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
                                                   ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#targetAddSubClass> .
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
 
 _:genid83 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
                                                   ] ;
@@ -313,9 +313,9 @@ _:genid87 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rm
                                                   ] ;
            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#sourceAddSubClass> .
 
-_:genid89 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
+_:genid89 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Parent"
                                                   ] ;
-           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
+           <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#targetAddSubClass> .
 
 _:genid91 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#AddSubClass> ;
            <http://www.w3.org/ns/r2rml#template> "http://example.com/changes/AddSubClass/{Child}-{Parent}" .
@@ -361,21 +361,21 @@ _:genid101 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#RemoveCl
 _:genid102 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
             <http://semweb.mmlab.be/ns/rml#source> "RemoveDataProperty_template.csv" .
 
-_:genid103 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
-                                                   ] ;
-            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
-
-_:genid105 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
+_:genid103 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
 
-_:genid107 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
+_:genid105 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
 
-_:genid109 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
+_:genid107 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#removedDataProperty> .
+
+_:genid109 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
 
 _:genid111 <http://www.w3.org/ns/r2rml#class> <https://w3id.org/def/och#RemoveDataProperty> ;
             <http://www.w3.org/ns/r2rml#template> "http://example.com/changes/RemoveDataProperty/{Predicate}" .
@@ -406,25 +406,25 @@ _:genid114 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/r
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
 
-_:genid116 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
+_:genid116 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
+
+_:genid118 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
 
-_:genid118 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
-                                                   ] ;
-            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
-
-_:genid120 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
-                                                   ] ;
-            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#removedDomainFromProperty> .
-
-_:genid122 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Domain"
+_:genid120 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Domain"
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#removedDomain> .
 
-_:genid124 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
+_:genid122 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
                                                    ] ;
-            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
+            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
+
+_:genid124 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#removedDomainFromProperty> .
 
 _:genid126 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
                                                    ] ;
@@ -500,25 +500,25 @@ _:genid146 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.m
 _:genid147 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
             <http://semweb.mmlab.be/ns/rml#source> "RemoveDataProperty_template.csv" .
 
-_:genid148 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Range"
-                                                   ] ;
-            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#removedObjectRange> .
-
-_:genid150 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
+_:genid148 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#fromChangelog> .
 
-_:genid152 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
+_:genid150 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Date"
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <http://purl.org/dc/terms/date> .
 
-_:genid154 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
+_:genid152 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Author"
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#issuedBy> .
 
-_:genid156 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
+_:genid154 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Predicate"
                                                    ] ;
             <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#removedRangeFromProperty> .
+
+_:genid156 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Range"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> <https://w3id.org/def/och#removedObjectRange> .
 
 _:genid158 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "Source"
                                                    ] ;

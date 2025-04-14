@@ -6,7 +6,7 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#AddAnnotation" title="https://w3id.org/def/och#AddAnnotation">Add Annotation</a>
+      <a href="#AddAnnotationToEntity" title="https://w3id.org/def/och#AddAnnotationToEntity">Add Annotation to Entity</a>
    </li>
    <li>
       <a href="#AddCharacteristic" title="https://w3id.org/def/och#AddCharacteristic">Add Characteristic</a>
@@ -64,7 +64,7 @@ This ontology has the following classes and properties.</span>
       <a href="#ChangeSet" title="https://w3id.org/def/och#ChangeSet">Change Set</a>
    </li>
    <li>
-      <a href="#AnnotationChange" title="https://w3id.org/def/och#AnnotationChange">Change to Annotation</a>
+      <a href="#EntityAnnotationChange" title="https://w3id.org/def/och#EntityAnnotationChange">Change to the Annotation of an Entity</a>
    </li>
    <li>
       <a href="#Changelog" title="https://w3id.org/def/och#Changelog">Changelog</a>
@@ -134,7 +134,8 @@ This ontology has the following classes and properties.</span>
       <a href="#RangeChange" title="https://w3id.org/def/och#RangeChange">Range Change</a>
    </li>
    <li>
-      <a href="#RemoveAnnotation" title="https://w3id.org/def/och#RemoveAnnotation">Remove Annotation</a>
+      <a href="#RemoveAnnotationFromEntity"
+         title="https://w3id.org/def/och#RemoveAnnotationFromEntity">Remove Annotation from Entity</a>
    </li>
    <li>
       <a href="#RemoveCharacteristic" title="https://w3id.org/def/och#RemoveCharacteristic">Remove Characteristic</a>
@@ -183,7 +184,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#RemoveRelationFromIndividual"
-         title="https://w3id.org/def/och#RemoveRelationFromIndividual">Remove Relation from Individuals</a>
+         title="https://w3id.org/def/och#RemoveRelationFromIndividual">Remove Relation from Individual</a>
    </li>
    <li>
       <a href="#RemoveSubClass" title="https://w3id.org/def/och#RemoveSubClass">Remove Sub Class</a>
@@ -207,20 +208,14 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#addAnnotationToResource" title="https://w3id.org/def/och#addAnnotationToResource">add annotation to resource</a>
-   </li>
-   <li>
       <a href="#addedCharacteristicToProperty"
-         title="https://w3id.org/def/och#addedCharacteristicToProperty">add Characteristic to property</a>
+         title="https://w3id.org/def/och#addedCharacteristicToProperty">add characteristic to property</a>
    </li>
    <li>
-      <a href="#addedRangeToProperty" title="https://w3id.org/def/och#addedRangeToProperty">add range for property</a>
+      <a href="#addedRangeToProperty" title="https://w3id.org/def/och#addedRangeToProperty">add range to property</a>
    </li>
    <li>
-      <a href="#addedAnnotation" title="https://w3id.org/def/och#addedAnnotation">added annotation</a>
-   </li>
-   <li>
-      <a href="#addedAnnotationType" title="https://w3id.org/def/och#addedAnnotationType">added annotation type</a>
+      <a href="#addedAnnotationToEntity" title="https://w3id.org/def/och#addedAnnotationToEntity">added annotation to entity</a>
    </li>
    <li>
       <a href="#addedCharacteristic" title="https://w3id.org/def/och#addedCharacteristic">added characteristic</a>
@@ -238,7 +233,7 @@ This ontology has the following classes and properties.</span>
       <a href="#addedDomain" title="https://w3id.org/def/och#addedDomain">added domain</a>
    </li>
    <li>
-      <a href="#addedDomainToProperty" title="https://w3id.org/def/och#addedDomainToProperty">added Domain for Property</a>
+      <a href="#addedDomainToProperty" title="https://w3id.org/def/och#addedDomainToProperty">added domain to property</a>
    </li>
    <li>
       <a href="#addedEntity" title="https://w3id.org/def/och#addedEntity">added entity</a>
@@ -253,7 +248,7 @@ This ontology has the following classes and properties.</span>
       <a href="#addedObjectRange" title="https://w3id.org/def/och#addedObjectRange">added object range</a>
    </li>
    <li>
-      <a href="#addedProperty" title="https://w3id.org/def/och#addedProperty">added Property</a>
+      <a href="#addedProperty" title="https://w3id.org/def/och#addedProperty">added property</a>
    </li>
    <li>
       <a href="#deprecatedEntity" title="https://w3id.org/def/och#deprecatedEntity">deprecated entity</a>
@@ -275,27 +270,21 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#addedRelationToIndividual"
-         title="https://w3id.org/def/och#addedRelationToIndividual">property add relation to individuals</a>
-   </li>
-   <li>
-      <a href="#removedCharacteristicFromProperty"
-         title="https://w3id.org/def/och#removedCharacteristicFromProperty">property RemoveCharacteristic</a>
+         title="https://w3id.org/def/och#addedRelationToIndividual">property add relation to individual</a>
    </li>
    <li>
       <a href="#relatedChange" title="https://w3id.org/def/och#relatedChange">related change</a>
    </li>
    <li>
-      <a href="#removedAnnotationFromResource"
-         title="https://w3id.org/def/och#removedAnnotationFromResource">remove annotation from resource</a>
-   </li>
-   <li>
-      <a href="#removedAnnotation" title="https://w3id.org/def/och#removedAnnotation">removed annotation</a>
-   </li>
-   <li>
-      <a href="#removedAnnotationType" title="https://w3id.org/def/och#removedAnnotationType">removed annotation type</a>
+      <a href="#removedAnnotationFromEntity"
+         title="https://w3id.org/def/och#removedAnnotationFromEntity">removed annotation from entity</a>
    </li>
    <li>
       <a href="#removedCharacteristic" title="https://w3id.org/def/och#removedCharacteristic">removed characteristic</a>
+   </li>
+   <li>
+      <a href="#removedCharacteristicFromProperty"
+         title="https://w3id.org/def/och#removedCharacteristicFromProperty">removed characteristic from property </a>
    </li>
    <li>
       <a href="#removedClass" title="https://w3id.org/def/och#removedClass">removed class</a>
@@ -311,7 +300,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#removedDomainFromProperty"
-         title="https://w3id.org/def/och#removedDomainFromProperty">removed Domain for Property</a>
+         title="https://w3id.org/def/och#removedDomainFromProperty">removed domain for property</a>
    </li>
    <li>
       <a href="#removedEntity" title="https://w3id.org/def/och#removedEntity">removed entity</a>
@@ -326,44 +315,48 @@ This ontology has the following classes and properties.</span>
       <a href="#removedObjectRange" title="https://w3id.org/def/och#removedObjectRange">removed object range</a>
    </li>
    <li>
-      <a href="#removedProperty" title="https://w3id.org/def/och#removedProperty">removed Property</a>
+      <a href="#removedProperty" title="https://w3id.org/def/och#removedProperty">removed property</a>
    </li>
    <li>
       <a href="#removedRangeFromProperty"
-         title="https://w3id.org/def/och#removedRangeFromProperty">removed range for property</a>
+         title="https://w3id.org/def/och#removedRangeFromProperty">removed range from property</a>
    </li>
    <li>
       <a href="#removedRelationFromIndividual"
-         title="https://w3id.org/def/och#removedRelationFromIndividual">removed relation from individuals</a>
+         title="https://w3id.org/def/och#removedRelationFromIndividual">removed relation from individual</a>
    </li>
    <li>
       <a href="#renamedEntityName" title="https://w3id.org/def/och#renamedEntityName">renamed entity name</a>
    </li>
    <li>
-      <a href="#sourceAddRelationToIndividual"
-         title="https://w3id.org/def/och#sourceAddRelationToIndividual">source add relation to individuals</a>
+      <a href="#sourceAddAnnotationToEntity"
+         title="https://w3id.org/def/och#sourceAddAnnotationToEntity">source add annotation to entity</a>
    </li>
    <li>
       <a href="#sourceAddDisjointProperty"
-         title="https://w3id.org/def/och#sourceAddDisjointProperty">source AddDisjointProperty</a>
+         title="https://w3id.org/def/och#sourceAddDisjointProperty">source add disjoint property</a>
    </li>
    <li>
       <a href="#sourceAddEquivalentClass"
-         title="https://w3id.org/def/och#sourceAddEquivalentClass">source AddEquivalentClass</a>
+         title="https://w3id.org/def/och#sourceAddEquivalentClass">source add equivalent class</a>
    </li>
    <li>
       <a href="#sourceAddEquivalentProperty"
-         title="https://w3id.org/def/och#sourceAddEquivalentProperty">source AddEquivalentProperty</a>
+         title="https://w3id.org/def/och#sourceAddEquivalentProperty">source add equivalent property</a>
    </li>
    <li>
       <a href="#sourceAddInverseProperty"
-         title="https://w3id.org/def/och#sourceAddInverseProperty">source AddInverseProperty</a>
+         title="https://w3id.org/def/och#sourceAddInverseProperty">source add inverse property</a>
    </li>
    <li>
-      <a href="#sourceAddSubClass" title="https://w3id.org/def/och#sourceAddSubClass">source AddSubClass</a>
+      <a href="#sourceAddRelationToIndividual"
+         title="https://w3id.org/def/och#sourceAddRelationToIndividual">source add relation to individual</a>
    </li>
    <li>
-      <a href="#sourceAddSubProperty" title="https://w3id.org/def/och#sourceAddSubProperty">source AddSubProperty</a>
+      <a href="#sourceAddSubClass" title="https://w3id.org/def/och#sourceAddSubClass">source add sub class</a>
+   </li>
+   <li>
+      <a href="#sourceAddSubProperty" title="https://w3id.org/def/och#sourceAddSubProperty">source add sub property</a>
    </li>
    <li>
       <a href="#sourceClass" title="https://w3id.org/def/och#sourceClass">source class</a>
@@ -375,57 +368,65 @@ This ontology has the following classes and properties.</span>
       <a href="#sourceProperty" title="https://w3id.org/def/och#sourceProperty">source property</a>
    </li>
    <li>
-      <a href="#sourceRemoveRelationToIndividual"
-         title="https://w3id.org/def/och#sourceRemoveRelationToIndividual">source remove relation to individuals</a>
+      <a href="#sourceRemoveAnnotationFromEntity"
+         title="https://w3id.org/def/och#sourceRemoveAnnotationFromEntity">source remove annotation from entity</a>
    </li>
    <li>
       <a href="#sourceRemoveDisjointProperty"
-         title="https://w3id.org/def/och#sourceRemoveDisjointProperty">source RemoveDisjointProperty</a>
+         title="https://w3id.org/def/och#sourceRemoveDisjointProperty">source remove disjoint property</a>
    </li>
    <li>
       <a href="#sourceRemoveEquivalentClass"
-         title="https://w3id.org/def/och#sourceRemoveEquivalentClass">source RemoveEquivalentClass</a>
+         title="https://w3id.org/def/och#sourceRemoveEquivalentClass">source remove equivalent class</a>
    </li>
    <li>
       <a href="#sourceRemoveEquivalentProperty"
-         title="https://w3id.org/def/och#sourceRemoveEquivalentProperty">source RemoveEquivalentProperty</a>
+         title="https://w3id.org/def/och#sourceRemoveEquivalentProperty">source remove equivalent property</a>
    </li>
    <li>
       <a href="#sourceRemoveInverseProperty"
-         title="https://w3id.org/def/och#sourceRemoveInverseProperty">source RemoveInverseProperty</a>
+         title="https://w3id.org/def/och#sourceRemoveInverseProperty">source remove inverse property</a>
    </li>
    <li>
-      <a href="#sourceRemoveSubClass" title="https://w3id.org/def/och#sourceRemoveSubClass">source RemoveSubClass</a>
+      <a href="#sourceRemoveRelationToIndividual"
+         title="https://w3id.org/def/och#sourceRemoveRelationToIndividual">source remove relation to individual</a>
+   </li>
+   <li>
+      <a href="#sourceRemoveSubClass" title="https://w3id.org/def/och#sourceRemoveSubClass">source remove sub class</a>
    </li>
    <li>
       <a href="#sourceRemoveSubProperty"
-         title="https://w3id.org/def/och#sourceRemoveSubProperty">source RemoveSubProperty</a>
+         title="https://w3id.org/def/och#sourceRemoveSubProperty">source remove sub property</a>
    </li>
    <li>
-      <a href="#targetAddRelationToIndividual"
-         title="https://w3id.org/def/och#targetAddRelationToIndividual">target add relation to individuals</a>
+      <a href="#targetAddAnnotationToEntity"
+         title="https://w3id.org/def/och#targetAddAnnotationToEntity">target add annotation to entity</a>
    </li>
    <li>
       <a href="#targetAddDisjointProperty"
-         title="https://w3id.org/def/och#targetAddDisjointProperty">target AddDisjointProperty</a>
+         title="https://w3id.org/def/och#targetAddDisjointProperty">target add disjoint property</a>
    </li>
    <li>
       <a href="#targetAddEquivalentClass"
-         title="https://w3id.org/def/och#targetAddEquivalentClass">target AddEquivalentClass</a>
+         title="https://w3id.org/def/och#targetAddEquivalentClass">target add equivalent class</a>
    </li>
    <li>
       <a href="#targetAddEquivalentProperty"
-         title="https://w3id.org/def/och#targetAddEquivalentProperty">target AddEquivalentProperty</a>
+         title="https://w3id.org/def/och#targetAddEquivalentProperty">target add equivalent property</a>
    </li>
    <li>
       <a href="#targetAddInverseProperty"
-         title="https://w3id.org/def/och#targetAddInverseProperty">target AddInverseProperty</a>
+         title="https://w3id.org/def/och#targetAddInverseProperty">target add inverse property</a>
    </li>
    <li>
-      <a href="#targetAddSubClass" title="https://w3id.org/def/och#targetAddSubClass">target AddSubClass</a>
+      <a href="#targetAddRelationToIndividual"
+         title="https://w3id.org/def/och#targetAddRelationToIndividual">target add relation to individual</a>
    </li>
    <li>
-      <a href="#targetAddSubProperty" title="https://w3id.org/def/och#targetAddSubProperty">target AddSubProperty</a>
+      <a href="#targetAddSubClass" title="https://w3id.org/def/och#targetAddSubClass">target add sub class</a>
+   </li>
+   <li>
+      <a href="#targetAddSubProperty" title="https://w3id.org/def/och#targetAddSubProperty">target add sub property</a>
    </li>
    <li>
       <a href="#targetClass" title="https://w3id.org/def/och#targetClass">target class</a>
@@ -434,34 +435,38 @@ This ontology has the following classes and properties.</span>
       <a href="#targetResource" title="https://w3id.org/def/och#targetResource">target individual</a>
    </li>
    <li>
-      <a href="#targetProperty" title="https://w3id.org/def/och#targetProperty">target Property</a>
+      <a href="#targetProperty" title="https://w3id.org/def/och#targetProperty">target property</a>
    </li>
    <li>
-      <a href="#targetRemoveRelationToIndividual"
-         title="https://w3id.org/def/och#targetRemoveRelationToIndividual">target remove relation to individuals</a>
+      <a href="#targetRemoveAnnotationFromEntity"
+         title="https://w3id.org/def/och#targetRemoveAnnotationFromEntity">target remove annotation from entity</a>
    </li>
    <li>
       <a href="#targetRemoveDisjointProperty"
-         title="https://w3id.org/def/och#targetRemoveDisjointProperty">target RemoveDisjointProperty</a>
+         title="https://w3id.org/def/och#targetRemoveDisjointProperty">target remove disjoint property</a>
    </li>
    <li>
       <a href="#targetRemoveEquivalentClass"
-         title="https://w3id.org/def/och#targetRemoveEquivalentClass">target RemoveEquivalentClass</a>
+         title="https://w3id.org/def/och#targetRemoveEquivalentClass">target remove equivalent class</a>
    </li>
    <li>
       <a href="#targetRemoveEquivalentProperty"
-         title="https://w3id.org/def/och#targetRemoveEquivalentProperty">target RemoveEquivalentProperty</a>
+         title="https://w3id.org/def/och#targetRemoveEquivalentProperty">target remove equivalent property</a>
    </li>
    <li>
       <a href="#targetRemoveInverseProperty"
-         title="https://w3id.org/def/och#targetRemoveInverseProperty">target RemoveInverseProperty</a>
+         title="https://w3id.org/def/och#targetRemoveInverseProperty">target remove inverse property</a>
    </li>
    <li>
-      <a href="#targetRemoveSubClass" title="https://w3id.org/def/och#targetRemoveSubClass">target RemovesubClass</a>
+      <a href="#targetRemoveRelationToIndividual"
+         title="https://w3id.org/def/och#targetRemoveRelationToIndividual">target remove relation to individual</a>
+   </li>
+   <li>
+      <a href="#targetRemoveSubClass" title="https://w3id.org/def/och#targetRemoveSubClass">target remove sub class</a>
    </li>
    <li>
       <a href="#targetRemoveSubProperty"
-         title="https://w3id.org/def/och#targetRemoveSubProperty">target RemoveSubProperty</a>
+         title="https://w3id.org/def/och#targetRemoveSubProperty">target remove sub property</a>
    </li>
    <li>
       <a href="#undeprecatedElement" title="https://w3id.org/def/och#undeprecatedElement">undeprecated element</a>

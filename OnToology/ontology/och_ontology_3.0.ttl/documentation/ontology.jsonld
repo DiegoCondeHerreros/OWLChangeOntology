@@ -162,7 +162,7 @@
     "@id" : "https://chowlk.linkeddata.es/"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/och#AddAnnotation",
+  "@id" : "https://w3id.org/def/och#AddAnnotationToEntity",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
   } ],
@@ -170,7 +170,7 @@
     "@value" : "The change operation that corresponds to the addition of the annotation of an entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Add Annotation"
+    "@value" : "Add Annotation to Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/def/och#AddCharacteristic",
@@ -436,17 +436,6 @@
     "@id" : "http://omv.ontoware.org/2007/07/OWLChangesAddSubPropertyOf"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/och#AnnotationChange",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The change operation that corresponds to the change of the annotation of an entity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Change to Annotation"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/och#AsymmetricProperty",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -578,6 +567,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/och#PropertyChange"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/och#EntityAnnotationChange",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The change operation that corresponds to the change of the annotation of an entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Change to the Annotation of an Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/def/och#EntityChange",
@@ -843,7 +843,7 @@
     "@value" : "Reflexive Property"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/och#RemoveAnnotation",
+  "@id" : "https://w3id.org/def/och#RemoveAnnotationFromEntity",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
   } ],
@@ -851,7 +851,7 @@
     "@value" : "The change operation that corresponds to the removal of the annotation of an entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Remove Annotation"
+    "@value" : "Remove Annotation from Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/def/och#RemoveCharacteristic",
@@ -1080,7 +1080,7 @@
     "@value" : "The change operation corresponding to the removal of a relation between two individuals"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Remove Relation from Individuals"
+    "@value" : "Remove Relation from Individual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/och#IndividualRelationChange"
@@ -1208,52 +1208,18 @@
     "@value" : "Transitive Property"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/och#addAnnotationToResource",
+  "@id" : "https://w3id.org/def/och#addedAnnotationToEntity",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Entity the annotation is added to"
+    "@value" : "The annotation property being added to an entity. Its range is rdf:Property to include both owl:AnnotationProperty and other annotations."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/och#AddAnnotation"
+    "@id" : "https://w3id.org/def/och#AddAnnotationToEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "add annotation to resource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/och#addedAnnotation",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The annotation being added to an entity."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/och#AddAnnotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "added annotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/och#addedAnnotationType",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The type of the annotation property being added to an entity. Its range is rdf:Property to include both owl:AnnotationProperty and other annotations."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/och#AddAnnotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "added annotation type"
+    "@value" : "added annotation to entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1287,7 +1253,7 @@
     "@id" : "https://w3id.org/def/och#AddCharacteristic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "add Characteristic to property"
+    "@value" : "add characteristic to property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1298,7 +1264,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The class being added in an AddClass operation"
+    "@value" : "The class being added to an ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/och#AddClass"
@@ -1378,7 +1344,7 @@
     "@id" : "https://w3id.org/def/och#AddDomain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "added Domain for Property"
+    "@value" : "added domain to property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1469,7 +1435,7 @@
     "@id" : "https://w3id.org/def/och#AddProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "added Property"
+    "@value" : "added property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1489,7 +1455,7 @@
     "@id" : "https://w3id.org/def/och#AddRange"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "add range for property"
+    "@value" : "add range to property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1506,7 +1472,7 @@
     "@id" : "https://w3id.org/def/och#AddRelationToIndividual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "property add relation to individuals"
+    "@value" : "property add relation to individual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1631,52 +1597,18 @@
     "@id" : "https://w3id.org/def/och#OntologicalChange"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/och#removedAnnotation",
+  "@id" : "https://w3id.org/def/och#removedAnnotationFromEntity",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The annotation being removed from an entity."
+    "@value" : "The annotation property being removed from an entity. Its range is rdf:Property to include both owl:AnnotationProperty and other annotations."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/och#RemoveAnnotation"
+    "@id" : "https://w3id.org/def/och#RemoveAnnotationFromEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "removed annotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/och#removedAnnotationFromResource",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Entity the annotation is removed from"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/och#RemoveAnnotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "remove annotation from resource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/och#removedAnnotationType",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The type of the annotation property being removed from an entity. Its range is rdf:Property to include both owl:AnnotationProperty and other annotations."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/och#RemoveAnnotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "removed annotation type"
+    "@value" : "removed annotation from entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1710,7 +1642,7 @@
     "@id" : "https://w3id.org/def/och#RemoveCharacteristic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "property RemoveCharacteristic"
+    "@value" : "removed characteristic from property "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1801,7 +1733,7 @@
     "@id" : "https://w3id.org/def/och#RemoveDomain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "removed Domain for Property"
+    "@value" : "removed domain for property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1892,7 +1824,7 @@
     "@id" : "https://w3id.org/def/och#RemoveProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "removed Property"
+    "@value" : "removed property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1906,13 +1838,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The removed range for a property"
+    "@value" : "The removed range from a property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/och#RemoveRange"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "removed range for property"
+    "@value" : "removed range from property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1929,7 +1861,7 @@
     "@id" : "https://w3id.org/def/och#RemoveRelationtoIndividual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "removed relation from individuals"
+    "@value" : "removed relation from individual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1952,6 +1884,23 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/och#sourceAddAnnotationToEntity",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Entity the annotation is added to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/och#AddAnnotationToEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "source add annotation to entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/och#sourceAddDisjointProperty",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -1963,7 +1912,7 @@
     "@id" : "https://w3id.org/def/och#AddDisjointProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source AddDisjointProperty"
+    "@value" : "source add disjoint property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -1983,7 +1932,7 @@
     "@id" : "https://w3id.org/def/och#AddEquivalentClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source AddEquivalentClass"
+    "@value" : "source add equivalent class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
@@ -2003,7 +1952,7 @@
     "@id" : "https://w3id.org/def/och#AddEquivalentProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source AddEquivalentProperty"
+    "@value" : "source add equivalent property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2023,7 +1972,7 @@
     "@id" : "https://w3id.org/def/och#AddInverseProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source AddInverseProperty"
+    "@value" : "source add inverse property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2043,7 +1992,7 @@
     "@id" : "https://w3id.org/def/och#AddRelationToIndividual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source add relation to individuals"
+    "@value" : "source add relation to individual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -2060,7 +2009,7 @@
     "@id" : "https://w3id.org/def/och#AddSubClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source AddSubClass"
+    "@value" : "source add sub class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
@@ -2080,7 +2029,7 @@
     "@id" : "https://w3id.org/def/och#AddSubPropertyOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source AddSubProperty"
+    "@value" : "source add sub property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2140,6 +2089,23 @@
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/och#sourceRemoveAnnotationFromEntity",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Entity the annotation is removed from"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/och#RemoveAnnotationFromEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "source remove annotation from entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/och#sourceRemoveDisjointProperty",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -2151,7 +2117,7 @@
     "@id" : "https://w3id.org/def/och#RemoveDisjointProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source RemoveDisjointProperty"
+    "@value" : "source remove disjoint property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2171,7 +2137,7 @@
     "@id" : "https://w3id.org/def/och#RemoveEquivalentClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source RemoveEquivalentClass"
+    "@value" : "source remove equivalent class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
@@ -2191,7 +2157,7 @@
     "@id" : "https://w3id.org/def/och#RemoveEquivalentProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source RemoveEquivalentProperty"
+    "@value" : "source remove equivalent property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2211,7 +2177,7 @@
     "@id" : "https://w3id.org/def/och#RemoveInverseProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source RemoveInverseProperty"
+    "@value" : "source remove inverse property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2231,7 +2197,7 @@
     "@id" : "https://w3id.org/def/och#RemoveRelationtoIndividual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source remove relation to individuals"
+    "@value" : "source remove relation to individual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -2248,7 +2214,7 @@
     "@id" : "https://w3id.org/def/och#RemoveSubClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source RemoveSubClass"
+    "@value" : "source remove sub class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
@@ -2268,13 +2234,30 @@
     "@id" : "https://w3id.org/def/och#RemoveSubPropertyOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source RemoveSubProperty"
+    "@value" : "source remove sub property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/def/och#sourceProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/och#targetAddAnnotationToEntity",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The content of the annotation being added to an entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/och#AddAnnotationToEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "target add annotation to entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ]
 }, {
   "@id" : "https://w3id.org/def/och#targetAddDisjointProperty",
@@ -2288,7 +2271,7 @@
     "@id" : "https://w3id.org/def/och#AddDisjointProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target AddDisjointProperty"
+    "@value" : "target add disjoint property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2308,7 +2291,7 @@
     "@id" : "https://w3id.org/def/och#AddEquivalentClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target AddEquivalentClass"
+    "@value" : "target add equivalent class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
@@ -2328,7 +2311,7 @@
     "@id" : "https://w3id.org/def/och#AddEquivalentProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target AddEquivalentProperty"
+    "@value" : "target add equivalent property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2348,7 +2331,7 @@
     "@id" : "https://w3id.org/def/och#AddInverseProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target AddInverseProperty"
+    "@value" : "target add inverse property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2368,7 +2351,7 @@
     "@id" : "https://w3id.org/def/och#AddRelationToIndividual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target add relation to individuals"
+    "@value" : "target add relation to individual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
@@ -2385,7 +2368,7 @@
     "@id" : "https://w3id.org/def/och#AddSubClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target AddSubClass"
+    "@value" : "target add sub class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
@@ -2405,7 +2388,7 @@
     "@id" : "https://w3id.org/def/och#AddSubPropertyOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target AddSubProperty"
+    "@value" : "target add sub property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2442,10 +2425,27 @@
     "@id" : "https://w3id.org/def/och#PropertyRelationChange"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target Property"
+    "@value" : "target property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/och#targetRemoveAnnotationFromEntity",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The content of the annotation being removed from an entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/och#RemoveAnnotationFromEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "target remove annotation from entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ]
 }, {
   "@id" : "https://w3id.org/def/och#targetRemoveDisjointProperty",
@@ -2459,7 +2459,7 @@
     "@id" : "https://w3id.org/def/och#RemoveDisjointProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target RemoveDisjointProperty"
+    "@value" : "target remove disjoint property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2479,7 +2479,7 @@
     "@id" : "https://w3id.org/def/och#RemoveEquivalentClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target RemoveEquivalentClass"
+    "@value" : "target remove equivalent class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
@@ -2499,7 +2499,7 @@
     "@id" : "https://w3id.org/def/och#RemoveEquivalentProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target RemoveEquivalentProperty"
+    "@value" : "target remove equivalent property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2519,7 +2519,7 @@
     "@id" : "https://w3id.org/def/och#RemoveInverseProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target RemoveInverseProperty"
+    "@value" : "target remove inverse property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -2539,7 +2539,7 @@
     "@id" : "https://w3id.org/def/och#RemoveRelationtoIndividual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target remove relation to individuals"
+    "@value" : "target remove relation to individual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
@@ -2556,7 +2556,7 @@
     "@id" : "https://w3id.org/def/och#RemoveSubClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target RemovesubClass"
+    "@value" : "target remove sub class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
@@ -2576,7 +2576,7 @@
     "@id" : "https://w3id.org/def/och#RemoveSubPropertyOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "target RemoveSubProperty"
+    "@value" : "target remove sub property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"

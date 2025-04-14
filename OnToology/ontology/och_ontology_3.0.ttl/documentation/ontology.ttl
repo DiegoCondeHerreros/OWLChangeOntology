@@ -103,28 +103,12 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/def/och#addAnnotationToResource
-:addAnnotationToResource rdf:type owl:ObjectProperty ;
-                         rdfs:domain :AddAnnotation ;
-                         rdfs:range rdfs:Resource ;
-                         rdfs:comment "The Entity the annotation is added to" ;
-                         rdfs:label "add annotation to resource" .
-
-
-###  https://w3id.org/def/och#addedAnnotation
-:addedAnnotation rdf:type owl:ObjectProperty ;
-                 rdfs:domain :AddAnnotation ;
-                 rdfs:range rdfs:Resource ;
-                 rdfs:comment "The annotation being added to an entity." ;
-                 rdfs:label "added annotation" .
-
-
-###  https://w3id.org/def/och#addedAnnotationType
-:addedAnnotationType rdf:type owl:ObjectProperty ;
-                     rdfs:domain :AddAnnotation ;
-                     rdfs:range rdf:Property ;
-                     rdfs:comment "The type of the annotation property being added to an entity. Its range is rdf:Property to include both owl:AnnotationProperty and other annotations." ;
-                     rdfs:label "added annotation type" .
+###  https://w3id.org/def/och#addedAnnotationToEntity
+:addedAnnotationToEntity rdf:type owl:ObjectProperty ;
+                         rdfs:domain :AddAnnotationToEntity ;
+                         rdfs:range rdf:Property ;
+                         rdfs:comment "The annotation property being added to an entity. Its range is rdf:Property to include both owl:AnnotationProperty and other annotations." ;
+                         rdfs:label "added annotation to entity" .
 
 
 ###  https://w3id.org/def/och#addedCharacteristic
@@ -140,7 +124,7 @@ xsd:date rdf:type rdfs:Datatype .
                                rdfs:domain :AddCharacteristic ;
                                rdfs:range rdf:Property ;
                                rdfs:comment "The property a characteristic is added to" ;
-                               rdfs:label "add Characteristic to property" .
+                               rdfs:label "add characteristic to property" .
 
 
 ###  https://w3id.org/def/och#addedClass
@@ -148,7 +132,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:subPropertyOf :addedEntity ;
             rdfs:domain :AddClass ;
             rdfs:range owl:Class ;
-            rdfs:comment "The class being added in an AddClass operation" ;
+            rdfs:comment "The class being added to an ontology" ;
             rdfs:label "added class" .
 
 
@@ -182,7 +166,7 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:domain :AddDomain ;
                        rdfs:range rdf:Property ;
                        rdfs:comment "The property a domain is added to." ;
-                       rdfs:label "added Domain for Property" .
+                       rdfs:label "added domain to property" .
 
 
 ###  https://w3id.org/def/och#addedEntity
@@ -225,7 +209,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:domain :AddProperty ;
                rdfs:range rdf:Property ;
                rdfs:comment "The property being added to the ontology" ;
-               rdfs:label "added Property" .
+               rdfs:label "added property" .
 
 
 ###  https://w3id.org/def/och#addedRangeToProperty
@@ -233,7 +217,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:domain :AddRange ;
                       rdfs:range rdf:Property ;
                       rdfs:comment "The property to which the change is being added." ;
-                      rdfs:label "add range for property" .
+                      rdfs:label "add range to property" .
 
 
 ###  https://w3id.org/def/och#addedRelationToIndividual
@@ -241,7 +225,7 @@ xsd:date rdf:type rdfs:Datatype .
                            rdfs:domain :AddRelationToIndividual ;
                            rdfs:range rdf:Property ;
                            rdfs:comment "The individual that is the relation being added in a change operation" ;
-                           rdfs:label "property add relation to individuals" .
+                           rdfs:label "property add relation to individual" .
 
 
 ###  https://w3id.org/def/och#deprecatedEntity
@@ -300,28 +284,12 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "related change" .
 
 
-###  https://w3id.org/def/och#removedAnnotation
-:removedAnnotation rdf:type owl:ObjectProperty ;
-                   rdfs:domain :RemoveAnnotation ;
-                   rdfs:range rdfs:Resource ;
-                   rdfs:comment "The annotation being removed from an entity." ;
-                   rdfs:label "removed annotation" .
-
-
-###  https://w3id.org/def/och#removedAnnotationFromResource
-:removedAnnotationFromResource rdf:type owl:ObjectProperty ;
-                               rdfs:domain :RemoveAnnotation ;
-                               rdfs:range rdfs:Resource ;
-                               rdfs:comment "The Entity the annotation is removed from" ;
-                               rdfs:label "remove annotation from resource" .
-
-
-###  https://w3id.org/def/och#removedAnnotationType
-:removedAnnotationType rdf:type owl:ObjectProperty ;
-                       rdfs:domain :RemoveAnnotation ;
-                       rdfs:range rdf:Property ;
-                       rdfs:comment "The type of the annotation property being removed from an entity. Its range is rdf:Property to include both owl:AnnotationProperty and other annotations." ;
-                       rdfs:label "removed annotation type" .
+###  https://w3id.org/def/och#removedAnnotationFromEntity
+:removedAnnotationFromEntity rdf:type owl:ObjectProperty ;
+                             rdfs:domain :RemoveAnnotationFromEntity ;
+                             rdfs:range rdf:Property ;
+                             rdfs:comment "The annotation property being removed from an entity. Its range is rdf:Property to include both owl:AnnotationProperty and other annotations." ;
+                             rdfs:label "removed annotation from entity" .
 
 
 ###  https://w3id.org/def/och#removedCharacteristic
@@ -337,7 +305,7 @@ xsd:date rdf:type rdfs:Datatype .
                                    rdfs:domain :RemoveCharacteristic ;
                                    rdfs:range rdf:Property ;
                                    rdfs:comment "The property a characteristicic is removed from" ;
-                                   rdfs:label "property RemoveCharacteristic" .
+                                   rdfs:label "removed characteristic from property " .
 
 
 ###  https://w3id.org/def/och#removedClass
@@ -379,7 +347,7 @@ xsd:date rdf:type rdfs:Datatype .
                            rdfs:domain :RemoveDomain ;
                            rdfs:range rdf:Property ;
                            rdfs:comment "The property a domain is removed from" ;
-                           rdfs:label "removed Domain for Property" .
+                           rdfs:label "removed domain for property" .
 
 
 ###  https://w3id.org/def/och#removedEntity
@@ -422,15 +390,15 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:domain :RemoveProperty ;
                  rdfs:range rdf:Property ;
                  rdfs:comment "The property being removed from the ontology" ;
-                 rdfs:label "removed Property" .
+                 rdfs:label "removed property" .
 
 
 ###  https://w3id.org/def/och#removedRangeFromProperty
 :removedRangeFromProperty rdf:type owl:ObjectProperty ;
                           rdfs:domain :RemoveRange ;
                           rdfs:range rdf:Property ;
-                          rdfs:comment "The removed range for a property" ;
-                          rdfs:label "removed range for property" .
+                          rdfs:comment "The removed range from a property" ;
+                          rdfs:label "removed range from property" .
 
 
 ###  https://w3id.org/def/och#removedRelationFromIndividual
@@ -438,7 +406,7 @@ xsd:date rdf:type rdfs:Datatype .
                                rdfs:domain :RemoveRelationtoIndividual ;
                                rdfs:range rdf:Property ;
                                rdfs:comment "The relation being removed from an individual in a change operation" ;
-                               rdfs:label "removed relation from individuals" .
+                               rdfs:label "removed relation from individual" .
 
 
 ###  https://w3id.org/def/och#renamedEntityName
@@ -449,13 +417,21 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:label "renamed entity name" .
 
 
+###  https://w3id.org/def/och#sourceAddAnnotationToEntity
+:sourceAddAnnotationToEntity rdf:type owl:ObjectProperty ;
+                             rdfs:domain :AddAnnotationToEntity ;
+                             rdfs:range rdfs:Resource ;
+                             rdfs:comment "The Entity the annotation is added to" ;
+                             rdfs:label "source add annotation to entity" .
+
+
 ###  https://w3id.org/def/och#sourceAddDisjointProperty
 :sourceAddDisjointProperty rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf :sourceProperty ;
                            rdfs:domain :AddDisjointProperty ;
                            rdfs:range rdf:Property ;
                            rdfs:comment "The subject of the disjoint property relation being added" ;
-                           rdfs:label "source AddDisjointProperty" .
+                           rdfs:label "source add disjoint property" .
 
 
 ###  https://w3id.org/def/och#sourceAddEquivalentClass
@@ -464,7 +440,7 @@ xsd:date rdf:type rdfs:Datatype .
                           rdfs:domain :AddEquivalentClass ;
                           rdfs:range owl:Class ;
                           rdfs:comment "The subject of the equivalent class relation being added" ;
-                          rdfs:label "source AddEquivalentClass" .
+                          rdfs:label "source add equivalent class" .
 
 
 ###  https://w3id.org/def/och#sourceAddEquivalentProperty
@@ -473,7 +449,7 @@ xsd:date rdf:type rdfs:Datatype .
                              rdfs:domain :AddEquivalentProperty ;
                              rdfs:range rdf:Property ;
                              rdfs:comment "The subject of the equivalent property relation being added" ;
-                             rdfs:label "source AddEquivalentProperty" .
+                             rdfs:label "source add equivalent property" .
 
 
 ###  https://w3id.org/def/och#sourceAddInverseProperty
@@ -482,7 +458,7 @@ xsd:date rdf:type rdfs:Datatype .
                           rdfs:domain :AddInverseProperty ;
                           rdfs:range rdf:Property ;
                           rdfs:comment "The subject of the inverse property relation being added" ;
-                          rdfs:label "source AddInverseProperty" .
+                          rdfs:label "source add inverse property" .
 
 
 ###  https://w3id.org/def/och#sourceAddRelationToIndividual
@@ -490,7 +466,7 @@ xsd:date rdf:type rdfs:Datatype .
                                rdfs:domain :AddRelationToIndividual ;
                                rdfs:range owl:NamedIndividual ;
                                rdfs:comment "The individual that is the subject of the relation being added in a change operation" ;
-                               rdfs:label "source add relation to individuals" .
+                               rdfs:label "source add relation to individual" .
 
 
 ###  https://w3id.org/def/och#sourceAddSubClass
@@ -499,7 +475,7 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:domain :AddSubClass ;
                    rdfs:range owl:Class ;
                    rdfs:comment "The subject of the subClass relation being added" ;
-                   rdfs:label "source AddSubClass" .
+                   rdfs:label "source add sub class" .
 
 
 ###  https://w3id.org/def/och#sourceAddSubProperty
@@ -508,7 +484,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:domain :AddSubPropertyOf ;
                       rdfs:range rdf:Property ;
                       rdfs:comment "The subject of the subProperty relation being added" ;
-                      rdfs:label "source AddSubProperty" .
+                      rdfs:label "source add sub property" .
 
 
 ###  https://w3id.org/def/och#sourceClass
@@ -535,13 +511,21 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:label "source property" .
 
 
+###  https://w3id.org/def/och#sourceRemoveAnnotationFromEntity
+:sourceRemoveAnnotationFromEntity rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :RemoveAnnotationFromEntity ;
+                                  rdfs:range rdfs:Resource ;
+                                  rdfs:comment "The Entity the annotation is removed from" ;
+                                  rdfs:label "source remove annotation from entity" .
+
+
 ###  https://w3id.org/def/och#sourceRemoveDisjointProperty
 :sourceRemoveDisjointProperty rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf :sourceProperty ;
                               rdfs:domain :RemoveDisjointProperty ;
                               rdfs:range rdf:Property ;
                               rdfs:comment "The subject of the disjoint property relation being removed" ;
-                              rdfs:label "source RemoveDisjointProperty" .
+                              rdfs:label "source remove disjoint property" .
 
 
 ###  https://w3id.org/def/och#sourceRemoveEquivalentClass
@@ -550,7 +534,7 @@ xsd:date rdf:type rdfs:Datatype .
                              rdfs:domain :RemoveEquivalentClass ;
                              rdfs:range owl:Class ;
                              rdfs:comment "The subject of the equivalent class relation being removed" ;
-                             rdfs:label "source RemoveEquivalentClass" .
+                             rdfs:label "source remove equivalent class" .
 
 
 ###  https://w3id.org/def/och#sourceRemoveEquivalentProperty
@@ -559,7 +543,7 @@ xsd:date rdf:type rdfs:Datatype .
                                 rdfs:domain :RemoveEquivalentProperty ;
                                 rdfs:range rdf:Property ;
                                 rdfs:comment "The subject of the equivalent property relation being removed" ;
-                                rdfs:label "source RemoveEquivalentProperty" .
+                                rdfs:label "source remove equivalent property" .
 
 
 ###  https://w3id.org/def/och#sourceRemoveInverseProperty
@@ -568,7 +552,7 @@ xsd:date rdf:type rdfs:Datatype .
                              rdfs:domain :RemoveInverseProperty ;
                              rdfs:range rdf:Property ;
                              rdfs:comment "The subject of the inverse property relation being removed" ;
-                             rdfs:label "source RemoveInverseProperty" .
+                             rdfs:label "source remove inverse property" .
 
 
 ###  https://w3id.org/def/och#sourceRemoveRelationToIndividual
@@ -576,7 +560,7 @@ xsd:date rdf:type rdfs:Datatype .
                                   rdfs:domain :RemoveRelationtoIndividual ;
                                   rdfs:range owl:NamedIndividual ;
                                   rdfs:comment "The individual that is the subject of the relation being removed in a change operation" ;
-                                  rdfs:label "source remove relation to individuals" .
+                                  rdfs:label "source remove relation to individual" .
 
 
 ###  https://w3id.org/def/och#sourceRemoveSubClass
@@ -585,7 +569,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:domain :RemoveSubClass ;
                       rdfs:range owl:Class ;
                       rdfs:comment "The subject of the disjoint property relation being added" ;
-                      rdfs:label "source RemoveSubClass" .
+                      rdfs:label "source remove sub class" .
 
 
 ###  https://w3id.org/def/och#sourceRemoveSubProperty
@@ -594,7 +578,15 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:domain :RemoveSubPropertyOf ;
                          rdfs:range rdf:Property ;
                          rdfs:comment "The subject of the subProperty relation being removed" ;
-                         rdfs:label "source RemoveSubProperty" .
+                         rdfs:label "source remove sub property" .
+
+
+###  https://w3id.org/def/och#targetAddAnnotationToEntity
+:targetAddAnnotationToEntity rdf:type owl:ObjectProperty ;
+                             rdfs:domain :AddAnnotationToEntity ;
+                             rdfs:range rdfs:Resource ;
+                             rdfs:comment "The content of the annotation being added to an entity." ;
+                             rdfs:label "target add annotation to entity" .
 
 
 ###  https://w3id.org/def/och#targetAddDisjointProperty
@@ -603,7 +595,7 @@ xsd:date rdf:type rdfs:Datatype .
                            rdfs:domain :AddDisjointProperty ;
                            rdfs:range rdf:Property ;
                            rdfs:comment "The object of the disjoint property relation being added" ;
-                           rdfs:label "target AddDisjointProperty" .
+                           rdfs:label "target add disjoint property" .
 
 
 ###  https://w3id.org/def/och#targetAddEquivalentClass
@@ -612,7 +604,7 @@ xsd:date rdf:type rdfs:Datatype .
                           rdfs:domain :AddEquivalentClass ;
                           rdfs:range owl:Class ;
                           rdfs:comment "The object of the equivalent class relation being added" ;
-                          rdfs:label "target AddEquivalentClass" .
+                          rdfs:label "target add equivalent class" .
 
 
 ###  https://w3id.org/def/och#targetAddEquivalentProperty
@@ -621,7 +613,7 @@ xsd:date rdf:type rdfs:Datatype .
                              rdfs:domain :AddEquivalentProperty ;
                              rdfs:range rdf:Property ;
                              rdfs:comment "The object of the equivalent property relation being added" ;
-                             rdfs:label "target AddEquivalentProperty" .
+                             rdfs:label "target add equivalent property" .
 
 
 ###  https://w3id.org/def/och#targetAddInverseProperty
@@ -630,7 +622,7 @@ xsd:date rdf:type rdfs:Datatype .
                           rdfs:domain :AddInverseProperty ;
                           rdfs:range rdf:Property ;
                           rdfs:comment "The object of the inverse property relation being added" ;
-                          rdfs:label "target AddInverseProperty" .
+                          rdfs:label "target add inverse property" .
 
 
 ###  https://w3id.org/def/och#targetAddRelationToIndividual
@@ -638,7 +630,7 @@ xsd:date rdf:type rdfs:Datatype .
                                rdfs:domain :AddRelationToIndividual ;
                                rdfs:range rdfs:Resource ;
                                rdfs:comment "The individual that is the object of the relation being added in a change operation" ;
-                               rdfs:label "target add relation to individuals" .
+                               rdfs:label "target add relation to individual" .
 
 
 ###  https://w3id.org/def/och#targetAddSubClass
@@ -647,7 +639,7 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:domain :AddSubClass ;
                    rdfs:range owl:Class ;
                    rdfs:comment "The object of the subClass relation being added" ;
-                   rdfs:label "target AddSubClass" .
+                   rdfs:label "target add sub class" .
 
 
 ###  https://w3id.org/def/och#targetAddSubProperty
@@ -656,7 +648,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:domain :AddSubPropertyOf ;
                       rdfs:range rdf:Property ;
                       rdfs:comment "The object of the subProperty relation being added" ;
-                      rdfs:label "target AddSubProperty" .
+                      rdfs:label "target add sub property" .
 
 
 ###  https://w3id.org/def/och#targetClass
@@ -672,7 +664,15 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:domain :PropertyRelationChange ;
                 rdfs:range rdf:Property ;
                 rdfs:comment "The property that is the object of the property relations being changed in a change operation" ;
-                rdfs:label "target Property" .
+                rdfs:label "target property" .
+
+
+###  https://w3id.org/def/och#targetRemoveAnnotationFromEntity
+:targetRemoveAnnotationFromEntity rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :RemoveAnnotationFromEntity ;
+                                  rdfs:range rdfs:Resource ;
+                                  rdfs:comment "The content of the annotation being removed from an entity." ;
+                                  rdfs:label "target remove annotation from entity" .
 
 
 ###  https://w3id.org/def/och#targetRemoveDisjointProperty
@@ -681,7 +681,7 @@ xsd:date rdf:type rdfs:Datatype .
                               rdfs:domain :RemoveDisjointProperty ;
                               rdfs:range rdf:Property ;
                               rdfs:comment "The object of the disjoint property relation being removed" ;
-                              rdfs:label "target RemoveDisjointProperty" .
+                              rdfs:label "target remove disjoint property" .
 
 
 ###  https://w3id.org/def/och#targetRemoveEquivalentClass
@@ -690,7 +690,7 @@ xsd:date rdf:type rdfs:Datatype .
                              rdfs:domain :RemoveEquivalentClass ;
                              rdfs:range owl:Class ;
                              rdfs:comment "The object of the equivalent class relation being removed" ;
-                             rdfs:label "target RemoveEquivalentClass" .
+                             rdfs:label "target remove equivalent class" .
 
 
 ###  https://w3id.org/def/och#targetRemoveEquivalentProperty
@@ -699,7 +699,7 @@ xsd:date rdf:type rdfs:Datatype .
                                 rdfs:domain :RemoveEquivalentProperty ;
                                 rdfs:range rdf:Property ;
                                 rdfs:comment "The object of the equivalent class relation being removed" ;
-                                rdfs:label "target RemoveEquivalentProperty" .
+                                rdfs:label "target remove equivalent property" .
 
 
 ###  https://w3id.org/def/och#targetRemoveInverseProperty
@@ -708,7 +708,7 @@ xsd:date rdf:type rdfs:Datatype .
                              rdfs:domain :RemoveInverseProperty ;
                              rdfs:range rdf:Property ;
                              rdfs:comment "The object of the inverse property relation being removed" ;
-                             rdfs:label "target RemoveInverseProperty" .
+                             rdfs:label "target remove inverse property" .
 
 
 ###  https://w3id.org/def/och#targetRemoveRelationToIndividual
@@ -716,7 +716,7 @@ xsd:date rdf:type rdfs:Datatype .
                                   rdfs:domain :RemoveRelationtoIndividual ;
                                   rdfs:range rdfs:Resource ;
                                   rdfs:comment "The individual that is the object of the relation being removed in a change operation" ;
-                                  rdfs:label "target remove relation to individuals" .
+                                  rdfs:label "target remove relation to individual" .
 
 
 ###  https://w3id.org/def/och#targetRemoveSubClass
@@ -725,7 +725,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:domain :RemoveSubClass ;
                       rdfs:range owl:Class ;
                       rdfs:comment "The object of the subClass relation being removed" ;
-                      rdfs:label "target RemovesubClass" .
+                      rdfs:label "target remove sub class" .
 
 
 ###  https://w3id.org/def/och#targetRemoveSubProperty
@@ -734,7 +734,7 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:domain :RemoveSubPropertyOf ;
                          rdfs:range rdf:Property ;
                          rdfs:comment "The object of the subProperty relation being removed" ;
-                         rdfs:label "target RemoveSubProperty" .
+                         rdfs:label "target remove sub property" .
 
 
 ###  https://w3id.org/def/och#targetResource
@@ -805,10 +805,10 @@ owl:Ontology rdf:type owl:Class .
 <http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
 
 
-###  https://w3id.org/def/och#AddAnnotation
-:AddAnnotation rdf:type owl:Class ;
-               rdfs:comment "The change operation that corresponds to the addition of the annotation of an entity" ;
-               rdfs:label "Add Annotation" .
+###  https://w3id.org/def/och#AddAnnotationToEntity
+:AddAnnotationToEntity rdf:type owl:Class ;
+                       rdfs:comment "The change operation that corresponds to the addition of the annotation of an entity" ;
+                       rdfs:label "Add Annotation to Entity" .
 
 
 ###  https://w3id.org/def/och#AddCharacteristic
@@ -939,12 +939,6 @@ owl:Ontology rdf:type owl:Class .
                   <http://www.w3.org/ns/prov#wasDerivedFrom> <http://omv.ontoware.org/2007/07/OWLChangesAddSubPropertyOf> .
 
 
-###  https://w3id.org/def/och#AnnotationChange
-:AnnotationChange rdf:type owl:Class ;
-                  rdfs:comment "The change operation that corresponds to the change of the annotation of an entity" ;
-                  rdfs:label "Change to Annotation" .
-
-
 ###  https://w3id.org/def/och#ChangeSet
 :ChangeSet rdf:type owl:Class ;
            rdfs:subClassOf :Changelog ;
@@ -1001,6 +995,12 @@ owl:Ontology rdf:type owl:Class .
               rdfs:subClassOf :PropertyChange ;
               rdfs:comment "The change operation corresponding to the change of the domain of a given property" ;
               rdfs:label "Domain Change" .
+
+
+###  https://w3id.org/def/och#EntityAnnotationChange
+:EntityAnnotationChange rdf:type owl:Class ;
+                        rdfs:comment "The change operation that corresponds to the change of the annotation of an entity" ;
+                        rdfs:label "Change to the Annotation of an Entity" .
 
 
 ###  https://w3id.org/def/och#EntityChange
@@ -1102,10 +1102,10 @@ owl:Ontology rdf:type owl:Class .
              rdfs:label "Range Change" .
 
 
-###  https://w3id.org/def/och#RemoveAnnotation
-:RemoveAnnotation rdf:type owl:Class ;
-                  rdfs:comment "The change operation that corresponds to the removal of the annotation of an entity" ;
-                  rdfs:label "Remove Annotation" .
+###  https://w3id.org/def/och#RemoveAnnotationFromEntity
+:RemoveAnnotationFromEntity rdf:type owl:Class ;
+                            rdfs:comment "The change operation that corresponds to the removal of the annotation of an entity" ;
+                            rdfs:label "Remove Annotation from Entity" .
 
 
 ###  https://w3id.org/def/och#RemoveCharacteristic
@@ -1218,7 +1218,7 @@ owl:Ontology rdf:type owl:Class .
 :RemoveRelationFromIndividual rdf:type owl:Class ;
                               rdfs:subClassOf :IndividualRelationChange ;
                               rdfs:comment "The change operation corresponding to the removal of a relation between two individuals" ;
-                              rdfs:label "Remove Relation from Individuals" .
+                              rdfs:label "Remove Relation from Individual" .
 
 
 ###  https://w3id.org/def/och#RemoveRelationtoIndividual
